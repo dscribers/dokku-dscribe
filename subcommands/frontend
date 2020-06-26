@@ -2,3 +2,12 @@
 
 source "$PLUGIN_AVAILABLE_PATH/dscribe/subcommands/create"
 source "$PLUGIN_AVAILABLE_PATH/dscribe/subcommands/packenv"
+
+slackurl=`dokku dscribe:slack prod`
+test ! -z "$slackurl" && dokku slack:set "${APP_NAME}" "$slackurl"
+
+slackurl=`dokku dscribe:slack staging`
+test ! -z "$slackurl" && dokku slack:set "${APP_NAME}-staging" "$slackurl"
+
+slackurl=`dokku dscribe:slack sprint`
+test ! -z "$slackurl" && dokku slack:set "${APP_NAME}-sprint" "$slackurl"

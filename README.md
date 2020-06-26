@@ -10,7 +10,7 @@ A dokku plugin to reduce app creation commands to just one.
 ## Installation
 
 ```bash
-sudo dokku plugin:install https://github.com/dscribers/dokku-dscribe.git dscribe
+sudo dokku plugin:install https://github.com/dscribers/dokku-dscribe-apps.git dscribe
 ```
 
 ## Usage
